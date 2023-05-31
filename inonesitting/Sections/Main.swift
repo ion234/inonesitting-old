@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  Main.swift
 //  inonesitting
 //
 //  Created by Allen Lin on 5/9/23.
@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct ContentView: View {
+struct Main: View {
     @StateObject var locationManager = LocationManager()
     var weatherManager = WeatherManager()
     
@@ -35,7 +35,7 @@ struct ContentView: View {
                 if locationManager.isLoading {
                     Loading_View()
                 } else {
-                    WelcomeView()
+                    OnboardingView()
                         .environmentObject(locationManager)
                 }
             }
@@ -49,7 +49,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        Main()
         
     }
 }
