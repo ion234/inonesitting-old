@@ -16,21 +16,38 @@ struct WelcomeView: View {
             
             Spacer()
             
-            // MARK: Image placeholder
-            Rectangle()
-                .frame(maxWidth: .infinity, maxHeight: 300)
-                .padding(.horizontal, 20)
-                .padding(.vertical)
+            // MARK: Top Graphic
+            ZStack {
+                Circle()
+                    .frame(width: 220)
+                    .shadow(radius: 0.5, x: 5, y: 5)
+            
+                VStack {
+                    ForEach(0..<3) { num in
+                        HStack {
+                            Rectangle()
+                                .frame(width: 22, height: 22)
+                                .cornerRadius(5)
+                            
+                            Rectangle()
+                                .frame(width: 108, height: 22)
+                                .cornerRadius(5)
+                        }
+                        .foregroundColor(.background)
+                        .padding(.bottom, 4)
+                    }
+                }
+            }
             
             Spacer()
             
             
             // MARK: Welcome card
-            VStack {
+            VStack(spacing: 10) {
                 
                 Text("Welcome to ")
                     .font(.title3)
-                    .fontWeight(.medium)
+                    .fontWeight(.semibold)
                     .padding(.horizontal)
                 
                 Text("In One Sitting")
@@ -38,17 +55,19 @@ struct WelcomeView: View {
                     .fontWeight(.heavy)
                     .padding(.horizontal)
           
-                Text("The all-in-one productivity tool that will guide and aid you throughout your day. ")
-                    .font(.headline)
-                    .lineSpacing(8)
-                    .multilineTextAlignment(.center)
-                    .padding()
-                
             }
-            
+    
             Divider()
                 .frame(width: 100)
                 .padding(.horizontal)
+            
+            Text("The all-in-one productivity tool that will guide and aid you throughout your day. ")
+                .font(.headline)
+                .foregroundColor(.black.opacity(0.7))
+                .lineSpacing(12)
+                .multilineTextAlignment(.center)
+                .padding(.horizontal)
+                .padding(.top)
             
             Spacer()
             
@@ -57,11 +76,13 @@ struct WelcomeView: View {
             } label: {
                 Text("Get Started")
                     .font(.headline)
-                    .fontWeight(.medium)
-                    .foregroundColor(.white)
+                    .fontWeight(.semibold)
+                    .foregroundColor(.black.opacity(0.8))
                     .padding()
-                    .background(Color.black)
-                    .cornerRadius(20)
+                    .padding(.horizontal)
+                    .background(Color("foreground"))
+                    .cornerRadius(30)
+                    .shadow(radius: 0.5, x: 3, y: 3)
                     .padding()
             }
             .buttonStyle(.plain)
@@ -82,6 +103,7 @@ struct WelcomeView: View {
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .background(Color.background)
     }
 }
 

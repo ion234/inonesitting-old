@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E30C8EB42A16AEE400A17FEB /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C8EB32A16AEE400A17FEB /* TasksView.swift */; };
-		E30C8EB62A16AF1300A17FEB /* ContentView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C8EB52A16AF1300A17FEB /* ContentView2.swift */; };
+		E30C8EB42A16AEE400A17FEB /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C8EB32A16AEE400A17FEB /* TaskListView.swift */; };
+		E30C8EB62A16AF1300A17FEB /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C8EB52A16AF1300A17FEB /* TaskView.swift */; };
 		E30C8EB82A16B07A00A17FEB /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C8EB72A16B07A00A17FEB /* TaskRow.swift */; };
 		E320469B2A0B0E4000BA1C76 /* inonesittingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E320469A2A0B0E4000BA1C76 /* inonesittingApp.swift */; };
 		E320469D2A0B0E4000BA1C76 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E320469C2A0B0E4000BA1C76 /* ContentView.swift */; };
@@ -33,8 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		E30C8EB32A16AEE400A17FEB /* TasksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksView.swift; sourceTree = "<group>"; };
-		E30C8EB52A16AF1300A17FEB /* ContentView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView2.swift; sourceTree = "<group>"; };
+		E30C8EB32A16AEE400A17FEB /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
+		E30C8EB52A16AF1300A17FEB /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		E30C8EB72A16B07A00A17FEB /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
 		E32046972A0B0E4000BA1C76 /* inonesitting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = inonesitting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E320469A2A0B0E4000BA1C76 /* inonesittingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inonesittingApp.swift; sourceTree = "<group>"; };
@@ -99,7 +99,8 @@
 		17C50D242A26EDC30022D330 /* Tasks */ = {
 			isa = PBXGroup;
 			children = (
-				E30C8EB32A16AEE400A17FEB /* TasksView.swift */,
+				E30C8EB52A16AF1300A17FEB /* TaskView.swift */,
+				E30C8EB32A16AEE400A17FEB /* TaskListView.swift */,
 				E3549CA52A17133200BA1C8D /* AddTaskView.swift */,
 				17C50D262A26EDD40022D330 /* TaskModel */,
 			);
@@ -175,7 +176,6 @@
 			isa = PBXGroup;
 			children = (
 				E320469C2A0B0E4000BA1C76 /* ContentView.swift */,
-				E30C8EB52A16AF1300A17FEB /* ContentView2.swift */,
 				17C50D232A26EDB80022D330 /* Onboarding */,
 				17C50D252A26EDCC0022D330 /* Weather */,
 				17C50D242A26EDC30022D330 /* Tasks */,
@@ -277,7 +277,7 @@
 				E35C00BE2A1481A40011383D /* Extensions.swift in Sources */,
 				E3549CA82A17159B00BA1C8D /* SmallAddButton.swift in Sources */,
 				E32046AF2A0B1A5E00BA1C76 /* Loading View.swift in Sources */,
-				E30C8EB42A16AEE400A17FEB /* TasksView.swift in Sources */,
+				E30C8EB42A16AEE400A17FEB /* TaskListView.swift in Sources */,
 				E320469D2A0B0E4000BA1C76 /* ContentView.swift in Sources */,
 				E30C8EB82A16B07A00A17FEB /* TaskRow.swift in Sources */,
 				E320469B2A0B0E4000BA1C76 /* inonesittingApp.swift in Sources */,
@@ -286,7 +286,7 @@
 				E3AC2C0D2A15BEF600D9DEE4 /* WeatherRow.swift in Sources */,
 				E32046AA2A0B120200BA1C76 /* LocationManager.swift in Sources */,
 				E35C00BA2A147F720011383D /* ModelData.swift in Sources */,
-				E30C8EB62A16AF1300A17FEB /* ContentView2.swift in Sources */,
+				E30C8EB62A16AF1300A17FEB /* TaskView.swift in Sources */,
 				E35C00B82A147EF00011383D /* WeatherView.swift in Sources */,
 				E3549CB12A171A6100BA1C8D /* Task.swift in Sources */,
 				E32046AD2A0B14B800BA1C76 /* WelcomeView.swift in Sources */,

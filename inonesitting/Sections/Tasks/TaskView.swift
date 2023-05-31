@@ -1,5 +1,5 @@
 //
-//  ContentView2.swift
+//  Task.swift
 //  inonesitting
 //
 //  Created by Allen Lin on 5/18/23.
@@ -7,17 +7,18 @@
 
 import SwiftUI
 
-struct ContentView2: View {
+struct TaskView: View {
+    
     @StateObject var realmManager = RealmManager()
+    
     @State private var showAddTaskView = false
+    
     @EnvironmentObject private var viewModel: ViewModel
     
     var body: some View {
         
-        
-        
-        ZStack(alignment: .bottomTrailing){
-            TasksView()
+        ZStack(alignment: .bottomTrailing) {
+            TaskListView()
                 .environmentObject(realmManager)
             
             SmallAddButton()
@@ -25,14 +26,11 @@ struct ContentView2: View {
                 .onTapGesture {
                     showAddTaskView.toggle()
                 }
-            
-            
+  
         }
         .sheet(isPresented: $showAddTaskView) {
             AddTaskView()
                 .environmentObject(realmManager)
-
-            
         }
         .onAppear { realmManager.getTasks()}
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
@@ -44,8 +42,8 @@ struct ContentView2: View {
     }
 }
 
-struct ContentView2_Previews: PreviewProvider {
+struct TaskView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView2()
+        TaskView()
     }
 }

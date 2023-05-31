@@ -42,13 +42,14 @@ struct ContentView: View {
             
             
         }
-        .background(Color(hue: 0.133, saturation: 0.755, brightness: 0.876))
-        .preferredColorScheme(.dark)
+        //.background(Color(hue: 0.133, saturation: 0.755, brightness: 0.876))
+
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+        
     }
 }
