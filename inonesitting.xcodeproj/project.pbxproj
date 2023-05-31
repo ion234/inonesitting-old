@@ -70,6 +70,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17C50D202A26ED680022D330 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				17C50D212A26ED830022D330 /* Extensions */,
+				E3AC2C0B2A15BEB800D9DEE4 /* ViewComponents */,
+				E32046A82A0B11D600BA1C76 /* Managers */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		17C50D212A26ED830022D330 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E35C00BD2A1481A40011383D /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		17C50D232A26EDB80022D330 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				E32046AC2A0B14B800BA1C76 /* WelcomeView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		17C50D242A26EDC30022D330 /* Tasks */ = {
+			isa = PBXGroup;
+			children = (
+				E30C8EB32A16AEE400A17FEB /* TasksView.swift */,
+				E3549CA52A17133200BA1C8D /* AddTaskView.swift */,
+				17C50D262A26EDD40022D330 /* TaskModel */,
+			);
+			path = Tasks;
+			sourceTree = "<group>";
+		};
+		17C50D252A26EDCC0022D330 /* Weather */ = {
+			isa = PBXGroup;
+			children = (
+				E35C00B72A147EF00011383D /* WeatherView.swift */,
+			);
+			path = Weather;
+			sourceTree = "<group>";
+		};
+		17C50D262A26EDD40022D330 /* TaskModel */ = {
+			isa = PBXGroup;
+			children = (
+				E3549CB02A171A6100BA1C8D /* Task.swift */,
+			);
+			path = TaskModel;
+			sourceTree = "<group>";
+		};
 		E320468E2A0B0E4000BA1C76 = {
 			isa = PBXGroup;
 			children = (
@@ -90,15 +142,11 @@
 			isa = PBXGroup;
 			children = (
 				E320469A2A0B0E4000BA1C76 /* inonesittingApp.swift */,
-				E3AC2C0B2A15BEB800D9DEE4 /* Components */,
-				E35C00BD2A1481A40011383D /* Extensions.swift */,
-				E32046AB2A0B13F800BA1C76 /* Views */,
-				E32046A82A0B11D600BA1C76 /* Manager */,
+				17C50D202A26ED680022D330 /* Core */,
+				E32046AB2A0B13F800BA1C76 /* Sections */,
+				E392B9402A197014002D1823 /* ViewModel.swift */,
 				E320469E2A0B0E4300BA1C76 /* Assets.xcassets */,
 				E32046A02A0B0E4300BA1C76 /* Preview Content */,
-				E3549CB02A171A6100BA1C8D /* Task.swift */,
-				E3549CAE2A17198300BA1C8D /* RealmManager.swift */,
-				E392B9402A197014002D1823 /* ViewModel.swift */,
 			);
 			path = inonesitting;
 			sourceTree = "<group>";
@@ -113,37 +161,37 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		E32046A82A0B11D600BA1C76 /* Manager */ = {
+		E32046A82A0B11D600BA1C76 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				E3549CAE2A17198300BA1C8D /* RealmManager.swift */,
 				E32046A92A0B120200BA1C76 /* LocationManager.swift */,
 				E35C00B32A1477060011383D /* WeatherManager.swift */,
 			);
-			path = Manager;
+			path = Managers;
 			sourceTree = "<group>";
 		};
-		E32046AB2A0B13F800BA1C76 /* Views */ = {
+		E32046AB2A0B13F800BA1C76 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
 				E320469C2A0B0E4000BA1C76 /* ContentView.swift */,
-				E32046AC2A0B14B800BA1C76 /* WelcomeView.swift */,
-				E32046AE2A0B1A5E00BA1C76 /* Loading View.swift */,
-				E35C00B72A147EF00011383D /* WeatherView.swift */,
 				E30C8EB52A16AF1300A17FEB /* ContentView2.swift */,
-				E30C8EB32A16AEE400A17FEB /* TasksView.swift */,
-				E3549CA52A17133200BA1C8D /* AddTaskView.swift */,
+				17C50D252A26EDCC0022D330 /* Weather */,
+				17C50D242A26EDC30022D330 /* Tasks */,
+				17C50D232A26EDB80022D330 /* Onboarding */,
 			);
-			path = Views;
+			path = Sections;
 			sourceTree = "<group>";
 		};
-		E3AC2C0B2A15BEB800D9DEE4 /* Components */ = {
+		E3AC2C0B2A15BEB800D9DEE4 /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
+				E32046AE2A0B1A5E00BA1C76 /* Loading View.swift */,
 				E3AC2C0C2A15BEF600D9DEE4 /* WeatherRow.swift */,
 				E30C8EB72A16B07A00A17FEB /* TaskRow.swift */,
 				E3549CA72A17159B00BA1C8D /* SmallAddButton.swift */,
 			);
-			path = Components;
+			path = ViewComponents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
