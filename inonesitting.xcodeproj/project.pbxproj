@@ -176,9 +176,9 @@
 			children = (
 				E320469C2A0B0E4000BA1C76 /* ContentView.swift */,
 				E30C8EB52A16AF1300A17FEB /* ContentView2.swift */,
+				17C50D232A26EDB80022D330 /* Onboarding */,
 				17C50D252A26EDCC0022D330 /* Weather */,
 				17C50D242A26EDC30022D330 /* Tasks */,
-				17C50D232A26EDB80022D330 /* Onboarding */,
 			);
 			path = Sections;
 			sourceTree = "<group>";
