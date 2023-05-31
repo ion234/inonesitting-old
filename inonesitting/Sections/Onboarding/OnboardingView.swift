@@ -109,12 +109,12 @@ struct OnboardingView: View {
                 VStack {
                     VStack(spacing: 10) {
                         Text("To get started,")
-                            .font(.title2)
+                            .font(.headline)
                             .fontWeight(.medium)
                             .multilineTextAlignment(.center)
                         
-                        Text("share your location!")
-                            .font(.title2)
+                        Text("share your location")
+                            .font(.headline)
                             .fontWeight(.medium)
                             .multilineTextAlignment(.center)
                     }

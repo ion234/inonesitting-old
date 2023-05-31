@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17BD52E22A27907F00D356A7 /* YourTasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BD52E12A27907F00D356A7 /* YourTasks.swift */; };
 		E30C8EB42A16AEE400A17FEB /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C8EB32A16AEE400A17FEB /* TaskListView.swift */; };
 		E30C8EB62A16AF1300A17FEB /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C8EB52A16AF1300A17FEB /* TaskView.swift */; };
 		E30C8EB82A16B07A00A17FEB /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C8EB72A16B07A00A17FEB /* TaskRow.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17BD52E12A27907F00D356A7 /* YourTasks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourTasks.swift; sourceTree = "<group>"; };
 		E30C8EB32A16AEE400A17FEB /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
 		E30C8EB52A16AF1300A17FEB /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		E30C8EB72A16B07A00A17FEB /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				E320469C2A0B0E4000BA1C76 /* Main.swift */,
+				17BD52E12A27907F00D356A7 /* YourTasks.swift */,
 				17C50D232A26EDB80022D330 /* Onboarding */,
 				17C50D252A26EDCC0022D330 /* Weather */,
 				17C50D242A26EDC30022D330 /* Tasks */,
@@ -282,6 +285,7 @@
 				E30C8EB82A16B07A00A17FEB /* TaskRow.swift in Sources */,
 				E320469B2A0B0E4000BA1C76 /* inonesittingApp.swift in Sources */,
 				E3549CAF2A17198300BA1C8D /* RealmManager.swift in Sources */,
+				17BD52E22A27907F00D356A7 /* YourTasks.swift in Sources */,
 				E392B9412A197014002D1823 /* ViewModel.swift in Sources */,
 				E3AC2C0D2A15BEF600D9DEE4 /* WeatherRow.swift in Sources */,
 				E32046AA2A0B120200BA1C76 /* LocationManager.swift in Sources */,
