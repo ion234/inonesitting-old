@@ -26,7 +26,6 @@ struct TaskView: View {
                 .onTapGesture {
                     showAddTaskView.toggle()
                 }
-  
         }
         .sheet(isPresented: $showAddTaskView) {
             AddTaskView()
@@ -35,10 +34,7 @@ struct TaskView: View {
         .onAppear { realmManager.getTasks()}
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
         .background(Color(hue: 0.086, saturation: 0.141, brightness: 0.901))
-        
-        
-        
-        
+    
     }
 }
 

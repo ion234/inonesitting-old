@@ -1,5 +1,5 @@
 //
-//  YourTasks.swift
+//  TaskDashboard.swift
 //  inonesitting
 //
 //  Created by Abe on 5/31/23.
@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct YourTasks: View {
+struct TaskDashboard: View {
     
-    
-    
+    @State private var showAddView: Bool = false
+
     var body: some View {
         VStack(spacing: 0) {
             
@@ -34,12 +34,18 @@ struct YourTasks: View {
                 }
                 .padding(.leading, 36)
                 
-                Image(systemName: "gearshape")
-                    .font(.custom("", fixedSize: 25))
-                    .fontWeight(.light)
-                    .padding(8)
-                    .background(Circle().foregroundColor(Color(.systemGray5)))
-                    .padding(.trailing, 32)
+                Button {
+                    showAddView = true
+                } label: {
+                    Image(systemName: "plus")
+                        .font(.custom("", fixedSize: 25))
+                        .fontWeight(.bold)
+                        .foregroundColor(.white)
+                        .padding(8)
+                        .background(Circle().foregroundColor(.red))
+                        .padding(.trailing, 32)
+                }
+                .buttonStyle(.plain)
                     
             }
             .padding(.top, 32)
@@ -53,6 +59,7 @@ struct YourTasks: View {
                 VStack(spacing: 4) {
                     Text("Today's Progress")
                         .font(.headline)
+                        .fontWeight(.bold)
                         .foregroundColor(.white)
                         .frame(maxWidth: .infinity, alignment: .leading)
                         .padding([.leading, .vertical])
@@ -107,11 +114,14 @@ struct YourTasks: View {
                     
         }
         .background(Color.background)
+        .sheet(isPresented: $showAddView) {
+            AddTaskView()
+        }
     }
 }
 
-struct YourTasks_Previews: PreviewProvider {
+struct TaskDashboard_Previews: PreviewProvider {
     static var previews: some View {
-        YourTasks()
+        TaskDashboard()
     }
 }
