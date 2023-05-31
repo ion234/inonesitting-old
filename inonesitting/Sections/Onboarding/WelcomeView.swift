@@ -12,24 +12,73 @@ struct WelcomeView: View {
     @EnvironmentObject var locationManager: LocationManager
     
     var body: some View {
-        VStack{
-            VStack(spacing: 20){
-                Text("Welcome to In One Sitting!")
-                    .bold().font(.title)
-                
-                Text("This all-in-one productivity tool will guide and aid you throughout your day. ")
-                
-                Text("To get started, share your location!")
-            }
-            .multilineTextAlignment(.center)
-            .padding()
+        VStack {
             
-            LocationButton(.shareCurrentLocation){
-                locationManager.requestLocation()
+            Spacer()
+            
+            // MARK: Image placeholder
+            Rectangle()
+                .frame(maxWidth: .infinity, maxHeight: 300)
+                .padding(.horizontal, 20)
+                .padding(.vertical)
+            
+            Spacer()
+            
+            
+            // MARK: Welcome card
+            VStack {
+                
+                Text("Welcome to ")
+                    .font(.title3)
+                    .fontWeight(.medium)
+                    .padding(.horizontal)
+                
+                Text("In One Sitting")
+                    .font(.largeTitle)
+                    .fontWeight(.heavy)
+                    .padding(.horizontal)
+          
+                Text("The all-in-one productivity tool that will guide and aid you throughout your day. ")
+                    .font(.headline)
+                    .lineSpacing(8)
+                    .multilineTextAlignment(.center)
+                    .padding()
+                
             }
-            .cornerRadius(30)
-            .symbolVariant(.fill)
-            .foregroundColor(.white)
+            
+            Divider()
+                .frame(width: 100)
+                .padding(.horizontal)
+            
+            Spacer()
+            
+            Button {
+                
+            } label: {
+                Text("Get Started")
+                    .font(.headline)
+                    .fontWeight(.medium)
+                    .foregroundColor(.white)
+                    .padding()
+                    .background(Color.black)
+                    .cornerRadius(20)
+                    .padding()
+            }
+            .buttonStyle(.plain)
+            
+            Spacer()
+                
+            
+                
+//                Text("To get started, share your location!")
+            
+//
+//            LocationButton(.shareCurrentLocation){
+//                locationManager.requestLocation()
+//            }
+//            .cornerRadius(30)
+//            .symbolVariant(.fill)
+//            .foregroundColor(.white)
             
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
