@@ -15,45 +15,63 @@ struct WeatherView: View {
     var weather: ResponseBody
     
     var body: some View {
-
         NavigationView {
             VStack {
-                ZStack(alignment: .leading) {
+                VStack {
+                    
+                    
                     VStack {
-                        VStack(alignment: .leading, spacing: 5){
-                            Text(weather.name)
-                                .bold().font(.title)
-                                .foregroundColor(.white)
+                        
+                        //MARK: Top Bar
+                        VStack {
+                            VStack(spacing: 0) {
+                                Text(weather.name)
+                                    .font(.title)
+                                    .fontWeight(.heavy)
+                                    .foregroundColor(.black)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                
+                                Text("Today, \(Date().formatted(.dateTime.month().day().hour().minute()))")
+                                    .fontWeight(.medium)
+                                    .foregroundColor(.black)
+                                    .frame(maxWidth: .infinity, alignment: .leading)
+                                    .padding(.vertical, 6)
                             
-                            Text("Today, \(Date().formatted(.dateTime.month().day().hour().minute()))")
-                                .fontWeight(.light)
-                                .foregroundColor(.white)
+                            }
                             
                             HStack {
                                 
-                                Button(action: {
+                                Button {
                                     // Code to be executed when the button is tapped
                                     print("Button tapped!")
-                                }) {
-                                    Text("Store   ")
+                                } label: {
+                                    Text("Store")
                                         .font(.headline)
-                                        .foregroundColor(.white)
+                                        .fontWeight(.semibold)
+                                        .foregroundColor(.black.opacity(0.8))
                                         .padding()
-                                        .background(Color.orange)
-                                        .cornerRadius(10)
+                                        .padding(.horizontal)
+                                        .background(Color("foreground"))
+                                        .cornerRadius(30)
+                                        .shadow(radius: 0.5, x: 2, y: 3)
+    
                                 }
+                                
                                 Spacer()
                                 
                                 Button(action: {
                                     // Code to be executed when the button is tapped
                                     print("Button tapped!")
                                 }) {
-                                    Text("Profile   ")
+                                    Text("Profile")
                                         .font(.headline)
-                                        .foregroundColor(.white)
+                                        .fontWeight(.semibold)
+                                        .foregroundColor(.black.opacity(0.8))
                                         .padding()
-                                        .background(Color.orange)
-                                        .cornerRadius(10)
+                                        .padding(.horizontal)
+                                        .background(Color("foreground"))
+                                        .cornerRadius(30)
+                                        .shadow(radius: 0.5, x: 2, y: 3)
                                 }
                                 
                                 Spacer()
@@ -65,19 +83,20 @@ struct WeatherView: View {
                                     
                                     
                                 }) {
-                                    Text("Task List   ")
+                                    Text("Tasks")
                                         .font(.headline)
-                                        .foregroundColor(.white)
+                                        .fontWeight(.semibold)
+                                        .foregroundColor(.black.opacity(0.8))
                                         .padding()
-                                        .background(Color.orange)
-                                        .cornerRadius(10)
+                                        .padding(.horizontal)
+                                        .background(Color("foreground"))
+                                        .cornerRadius(30)
+                                        .shadow(radius: 0.5, x: 2, y: 3)
                                 }
                                 
                             }
-                            
-                            
+                            .padding(.top, 6)
                         }
-                        .frame(maxWidth: .infinity, alignment: .leading)
                         
                         Spacer()
                         
@@ -93,6 +112,7 @@ struct WeatherView: View {
                                     Text(weather.weather[0].main)
                                 }
                                 .frame(width: 150, alignment: .leading)
+                                .foregroundColor(.black)
                                 
                                 Spacer()
                                 
@@ -100,29 +120,28 @@ struct WeatherView: View {
                                 Text(weather.main.feelsLike.roundDouble() + "°")
                                     .font(.system(size: 100))
                                     .fontWeight(.bold)
+                                    .foregroundColor(.black)
                                     .padding()
                                 
-                                
-                                
                             }
-                            
-                            Spacer()
-                                .frame(height: 80)
-                            
-                            AsyncImage(url: URL(string: "https://cdn.pixabay.com/photo/2020/01/24/21/33/city-4791269_960_720.png")) { image in
-                                image
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fit)
-                                    .frame(width: 350)
-                            } placeholder: {
-                                ProgressView()
-                            }
-                            
-                            Spacer()
-                            
                         }
-                        .foregroundColor(.white)
-                        .frame(maxWidth: .infinity)
+                        
+        
+                        Spacer()
+                        
+                        AsyncImage(url: URL(string: "https://cdn.pixabay.com/photo/2020/01/24/21/33/city-4791269_960_720.png")) { image in
+                            image
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: 220)
+                                .clipped()
+                        } placeholder: {
+                            ProgressView()
+                        }
+                        
+                        Spacer()
+                            
+                
                     }
                     .padding()
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -158,7 +177,7 @@ struct WeatherView: View {
                         .padding()
                         .padding(.bottom, 20)
                         .foregroundColor(Color(hue: 0.118, saturation: 0.65, brightness: 0.415))
-                        .background(.white)
+                        .background(.gray.opacity(0.7))
                         .cornerRadius(20, corners: [.topLeft, .topRight])
                         
                     }
@@ -176,8 +195,7 @@ struct WeatherView: View {
                 
             }
             .edgesIgnoringSafeArea(.bottom)
-            .background(Color(hue: 0.133, saturation: 0.755, brightness: 0.876))
-            .preferredColorScheme(.dark)
+            .background(Color.background)
         }
         .preferredColorScheme(.light)
         
