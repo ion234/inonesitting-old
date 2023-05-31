@@ -15,14 +15,10 @@ struct WeatherView: View {
     var weather: ResponseBody
     
     var body: some View {
-        
-        
-        NavigationView {
-            VStack{
-                
-                ZStack(alignment: .leading) {
 
-                    
+        NavigationView {
+            VStack {
+                ZStack(alignment: .leading) {
                     VStack {
                         VStack(alignment: .leading, spacing: 5){
                             Text(weather.name)
@@ -167,9 +163,13 @@ struct WeatherView: View {
                         
                     }
                     
+                    NavigationLink {
+                        TaskView()
+                    } label: {
+                        Text("")
+                    }
                     
-                    
-                    NavigationLink(destination: ContentView2(), isActive: $viewModel.showSecondView) {
+                    NavigationLink(destination: TaskView(), isActive: $viewModel.showSecondView) {
                     }
                     
                 }

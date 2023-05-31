@@ -31,3 +31,11 @@ struct RoundedCorner: Shape {
         return Path(path.cgPath)
     }
 }
+
+extension Color {
+    
+    static var background: Color {
+        return Color("background")
+    }
+    
+}

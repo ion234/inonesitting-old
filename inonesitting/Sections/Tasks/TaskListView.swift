@@ -1,5 +1,5 @@
 //
-//  TasksView.swift
+//  TaskListView.swift
 //  inonesitting
 //
 //  Created by Allen Lin on 5/18/23.
@@ -7,13 +7,14 @@
 
 import SwiftUI
 
-struct TasksView: View {
+struct TaskListView: View {
     @EnvironmentObject var realmManager: RealmManager
     var body: some View {
         VStack {
-            Text("Task List")
-                .font(.title3).bold()
-                .padding()
+            Text("Your Tasks")
+                .font(.title2)
+                .fontWeight(.bold)
+                .padding(20)
                 .frame(maxWidth: .infinity, alignment: .leading)
 
             if realmManager.tasks.count >= 0 {
@@ -47,7 +48,7 @@ struct TasksView: View {
 
 struct TasksView_Previews: PreviewProvider {
     static var previews: some View {
-        TasksView()
+        TaskListView()
             .environmentObject(RealmManager())
         
           
