@@ -74,7 +74,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		17BD52E32A27D78B00D356A7 /* Allan */ = {
+		17BD52E32A27D78B00D356A7 /* Allen */ = {
 			isa = PBXGroup;
 			children = (
 				E30C8EB32A16AEE400A17FEB /* TaskListView.swift */,
@@ -82,7 +82,7 @@
 				E30C8EB52A16AF1300A17FEB /* TaskView.swift */,
 				17C50D262A26EDD40022D330 /* TaskModel */,
 			);
-			path = Allan;
+			path = Allen;
 			sourceTree = "<group>";
 		};
 		17C50D202A26ED680022D330 /* Core */ = {
@@ -116,7 +116,7 @@
 			children = (
 				17BD52E12A27907F00D356A7 /* TaskDashboard.swift */,
 				17BD52E42A27D90400D356A7 /* CreateTask.swift */,
-				17BD52E32A27D78B00D356A7 /* Allan */,
+				17BD52E32A27D78B00D356A7 /* Allen */,
 			);
 			path = Tasks;
 			sourceTree = "<group>";
