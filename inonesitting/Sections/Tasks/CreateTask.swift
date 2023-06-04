@@ -88,6 +88,16 @@ struct CreateTask: View {
                 }
                 
                 
+                VStack {
+                    
+                    Text("Duration")
+                        .font(.headline)
+                        .fontWeight(.semibold)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.vertical)
+                        .padding(.horizontal, 24)
+                }
+                
                 VStack(spacing: -0) {
                     Text("Start Time ")
                         .font(.title3)
