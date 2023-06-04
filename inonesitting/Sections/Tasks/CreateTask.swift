@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CreateTask: View {
     
+    @Environment(\.dismiss) var dismiss
+    
     @State private var title: String = ""
     @State private var details: String = ""
     @State private var startDate: Date = Date()
@@ -17,22 +19,39 @@ struct CreateTask: View {
     var body: some View {
         VStack(spacing: 0) {
             
-            RoundedRectangle(cornerRadius: 20)
-                .frame(width: 60, height: 5)
-                .foregroundColor(.gray.opacity(0.5))
-                .padding()
+            //MARK: Nav/Title Bar
+            HStack {
+                Button {
+                    dismiss()
+                } label: {
+                    Image(systemName: "chevron.left")
+                        .rotationEffect(Angle(degrees: 270))
+                        .font(.system(size: 20))
+                        .fontWeight(.bold)
+                        .padding(12)
+                        .foregroundColor(.white)
+                        .background(Color.black)
+                        .cornerRadius(8)
+                        .shadow(radius: 1)
+                        .padding(.bottom, 8)
+                    
+                }
+                .buttonStyle(.plain)
+                
+                Spacer()
+                
+                Text("New Task")
+                    .font(.system(size: 22))
+                    .fontWeight(.semibold)
+                    .fontDesign(.serif)
+                    .padding(.bottom, 8)
+            }
+            .padding(.horizontal, 24)
             
             Divider()
+                .padding(.top, 8)
             
             ScrollView(showsIndicators: false) {
-                Text("New Task + ")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .fontDesign(.serif)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding(.vertical)
-                    .padding(.horizontal, 24)
-                
                 
                 //MARK: Title Textfield
                 VStack(spacing: 0) {
@@ -49,6 +68,7 @@ struct CreateTask: View {
                         .border(.black.opacity(0.3), width: 1)
                         .padding(.horizontal, 24)
                 }
+                .padding(.top)
                 
                 //MARK: Details TextEditor
                 VStack(spacing: 0) {
