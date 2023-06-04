@@ -1,6 +1,4 @@
 # InOneSitting
-![Image Alt Text](ios logo.PNG)
-
 An app that aims to optimize productivity and workflow. 
 
 # Introduction
