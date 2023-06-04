@@ -178,7 +178,7 @@ struct WeatherView: View {
                         .padding(.bottom, 20)
                         .foregroundColor(Color(hue: 0.118, saturation: 0.65, brightness: 0.415))
                         .background(.gray.opacity(0.7))
-                        .cornerRadius(20, corners: [.topLeft, .topRight])
+                        .customCornerRadius(20, corners: [.topLeft, .topRight])
                         
                     }
                     
