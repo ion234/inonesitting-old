@@ -7,9 +7,11 @@
 
 import SwiftUI
 
+@available(iOS 16.1, *)
 struct CreateTask: View {
     
     @State private var title: String = ""
+    @State private var details: String = ""
     
     var body: some View {
         VStack {
@@ -19,7 +21,7 @@ struct CreateTask: View {
                 .foregroundColor(.gray.opacity(0.5))
                 .padding()
             
-            Text("Create Task +")
+            Text("Create Task")
                 .font(.title)
                 .fontWeight(.bold)
                 .fontDesign(.serif)
@@ -45,14 +47,14 @@ struct CreateTask: View {
             }
             
             VStack(spacing: 0) {
-                Text("Enter a Title")
+                Text("Enter its Details")
                     .font(.title3)
                     .fontWeight(.semibold)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.vertical)
                     .padding(.horizontal, 24)
                 
-                TextField("Title", text: $title)
+                TextField("Details", text: $details)
                     .padding()
                     .border(.black, width: 1)
                     .padding(.horizontal, 24)
@@ -71,6 +73,7 @@ struct CreateTask: View {
     }
 }
 
+@available(iOS 16.1, *)
 struct TaskAddView_Previews: PreviewProvider {
     static var previews: some View {
         CreateTask()
