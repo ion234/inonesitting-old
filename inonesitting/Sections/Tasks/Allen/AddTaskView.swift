@@ -21,10 +21,12 @@ struct AddTaskView: View {
             TextField("Enter your task here", text: $title)
                 .textFieldStyle(.roundedBorder)
             
+            Text("Create a new task.")
+            
             Button {
                 if title != "" {
                     realmManager.addTask(taskTitle: title)
-                }
+              co  }
                 dismiss()
             } label: {
                 Text("Add task")
