@@ -38,17 +38,17 @@ struct TaskDashboard: View {
                     showAddView = true
                 } label: {
                     Image(systemName: "plus")
-                        .font(.system(size: 22))
+                        .font(.system(size: 20))
                         .fontWeight(.bold)
                         .foregroundColor(.white)
                         .padding(8)
-                        .background(Circle().foregroundColor(.red))
+                        .background(Circle().foregroundColor(.black))
                         .padding(.trailing, 24)
                 }
                 .buttonStyle(.plain)
                     
             }
-            .padding(.top, 24)
+            .padding(.top, 20)
             .padding(.bottom)
             
             Divider()
@@ -99,7 +99,7 @@ struct TaskDashboard: View {
             }
         }
         .background(Color.background)
-        .sheet(isPresented: $showAddView) {
+        .fullScreenCover(isPresented: $showAddView) {
             CreateTask()
         }
     }

@@ -31,6 +31,7 @@
 		E35C00BA2A147F720011383D /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35C00B92A147F720011383D /* ModelData.swift */; };
 		E35C00BC2A147FA00011383D /* weatherData.JSON in Resources */ = {isa = PBXBuildFile; fileRef = E35C00BB2A147FA00011383D /* weatherData.JSON */; };
 		E35C00BE2A1481A40011383D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35C00BD2A1481A40011383D /* Extensions.swift */; };
+		E36533682A2D0EDC003C7DC1 /* testfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36533672A2D0EDC003C7DC1 /* testfile.swift */; };
 		E392B9412A197014002D1823 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E392B9402A197014002D1823 /* ViewModel.swift */; };
 		E3AC2C0D2A15BEF600D9DEE4 /* WeatherRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AC2C0C2A15BEF600D9DEE4 /* WeatherRow.swift */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,7 @@
 		E35C00B92A147F720011383D /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		E35C00BB2A147FA00011383D /* weatherData.JSON */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = weatherData.JSON; sourceTree = "<group>"; };
 		E35C00BD2A1481A40011383D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E36533672A2D0EDC003C7DC1 /* testfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testfile.swift; sourceTree = "<group>"; };
 		E392B9402A197014002D1823 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		E3AC2C0C2A15BEF600D9DEE4 /* WeatherRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -178,6 +180,7 @@
 		E32046992A0B0E4000BA1C76 /* inonesitting */ = {
 			isa = PBXGroup;
 			children = (
+				E36533672A2D0EDC003C7DC1 /* testfile.swift */,
 				178C129A2A2D00CB00CAFA60 /* WeatherArchive */,
 				E320469A2A0B0E4000BA1C76 /* inonesittingApp.swift */,
 				17C50D202A26ED680022D330 /* Core */,
@@ -326,6 +329,7 @@
 				E3549CB12A171A6100BA1C8D /* Task.swift in Sources */,
 				E32046AD2A0B14B800BA1C76 /* OnboardingView.swift in Sources */,
 				17BD52E52A27D90400D356A7 /* CreateTask.swift in Sources */,
+				E36533682A2D0EDC003C7DC1 /* testfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
