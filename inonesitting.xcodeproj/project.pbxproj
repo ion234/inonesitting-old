@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		172921682A2C100C0091C0F7 /* TaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172921672A2C100C0091C0F7 /* TaskModel.swift */; };
 		17BD52E22A27907F00D356A7 /* TaskDashboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BD52E12A27907F00D356A7 /* TaskDashboard.swift */; };
 		17BD52E52A27D90400D356A7 /* CreateTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BD52E42A27D90400D356A7 /* CreateTask.swift */; };
 		E30C8EB42A16AEE400A17FEB /* TaskListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C8EB32A16AEE400A17FEB /* TaskListView.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		172921672A2C100C0091C0F7 /* TaskModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskModel.swift; sourceTree = "<group>"; };
 		17BD52E12A27907F00D356A7 /* TaskDashboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskDashboard.swift; sourceTree = "<group>"; };
 		17BD52E42A27D90400D356A7 /* CreateTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTask.swift; sourceTree = "<group>"; };
 		E30C8EB32A16AEE400A17FEB /* TaskListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListView.swift; sourceTree = "<group>"; };
@@ -74,6 +76,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		172921662A2C10040091C0F7 /* TaskModel */ = {
+			isa = PBXGroup;
+			children = (
+				172921672A2C100C0091C0F7 /* TaskModel.swift */,
+			);
+			path = TaskModel;
+			sourceTree = "<group>";
+		};
 		17BD52E32A27D78B00D356A7 /* Allen */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +98,7 @@
 		17C50D202A26ED680022D330 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				172921662A2C10040091C0F7 /* TaskModel */,
 				17C50D212A26ED830022D330 /* Extensions */,
 				E3AC2C0B2A15BEB800D9DEE4 /* ViewComponents */,
 				E32046A82A0B11D600BA1C76 /* Managers */,
@@ -292,6 +303,7 @@
 				E3549CA82A17159B00BA1C8D /* SmallAddButton.swift in Sources */,
 				E32046AF2A0B1A5E00BA1C76 /* Loading View.swift in Sources */,
 				E30C8EB42A16AEE400A17FEB /* TaskListView.swift in Sources */,
+				172921682A2C100C0091C0F7 /* TaskModel.swift in Sources */,
 				E320469D2A0B0E4000BA1C76 /* Main.swift in Sources */,
 				E30C8EB82A16B07A00A17FEB /* TaskRow.swift in Sources */,
 				E320469B2A0B0E4000BA1C76 /* inonesittingApp.swift in Sources */,

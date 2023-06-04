@@ -13,9 +13,7 @@ struct TaskDashboard: View {
 
     var body: some View {
         VStack(spacing: 0) {
-            
-            Spacer()
-            
+        
             //MARK: Top Bar
             HStack {
                 VStack(spacing: 8) {
@@ -60,7 +58,7 @@ struct TaskDashboard: View {
         }
         .background(Color.background)
         .sheet(isPresented: $showAddView) {
-            AddTaskView()
+            CreateTask()
         }
     }
 }
