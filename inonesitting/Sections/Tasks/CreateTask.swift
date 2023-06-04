@@ -34,6 +34,7 @@ struct CreateTask: View {
             Spacer()
             
             
+            
             VStack(spacing: 0) {
                 Text("Enter a Title")
                     .font(.title3)
@@ -64,30 +65,27 @@ struct CreateTask: View {
             }
             
             VStack(spacing: -55) {
-                            Text("Start Date")
-                                .font(.title3)
-                                .fontWeight(.semibold)
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                .padding(.vertical)
-                                .padding(.horizontal, 24)
-                
-              
-                    DatePicker("", selection: $startDate, displayedComponents: .date)
-                        .padding()
-                        .padding(.horizontal, 24)
-                
-                
-                        }
-                        
-                        VStack(spacing: -55) {
-                            Text("End Date")
+                            Text("Start Time ")
                                 .font(.title3)
                                 .fontWeight(.semibold)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                                 .padding(.vertical)
                                 .padding(.horizontal, 24)
                             
-                            DatePicker("", selection: $endDate, displayedComponents: .date)
+                            DatePicker("", selection: $startDate, displayedComponents: [.date, .hourAndMinute])
+                                .padding()
+                                .padding(.horizontal, 24)
+                        }
+                        
+                        VStack(spacing: -55) {
+                            Text("End Time ")
+                                .font(.title3)
+                                .fontWeight(.semibold)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.vertical)
+                                .padding(.horizontal, 24)
+                            
+                            DatePicker("", selection: $endDate, displayedComponents: [.date, .hourAndMinute])
                                 .padding()
                                 .padding(.horizontal, 24)
                         }
