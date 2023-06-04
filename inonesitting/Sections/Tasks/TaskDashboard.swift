@@ -10,6 +10,10 @@ import SwiftUI
 struct TaskDashboard: View {
     
     @State private var showAddView: Bool = false
+    
+    
+    // Temporary variable for number of tasks
+    @State private var numTasks = 0
 
     var body: some View {
         VStack(spacing: 0) {
@@ -51,7 +55,44 @@ struct TaskDashboard: View {
             
             Divider()
                
-            ScrollView(showsIndicators: false) {
+            if numTasks == 0 {
+                
+                
+                ScrollView(showsIndicators: false) {
+                    
+                    VStack {
+                        
+                        Text("Looks like you don't have any tasks. ")
+                            .font(.title3)
+                            .fontWeight(.semibold)
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding()
+                        
+                        Button {
+                            
+                            showAddView = true
+                            
+                        } label: {
+                            Text("New Task")
+                                .fontWeight(.semibold)
+                                .foregroundColor(.black)
+                                .padding(10)
+                                .background(Color.white)
+                                .cornerRadius(8)
+                                .frame(maxWidth: .infinity, alignment: .trailing)
+                        }
+                        .padding([.horizontal, .bottom])
+                        
+                        
+                    }
+                    .background(Color.black)
+                    .cornerRadius(8)
+                    .padding(24)
+                    
+                }
+            }
+            else {
                 
             }
         }
