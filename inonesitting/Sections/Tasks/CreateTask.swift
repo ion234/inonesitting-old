@@ -15,6 +15,8 @@ struct CreateTask: View {
     @State private var startDate: Date = Date()
     @State private var endDate: Date = Date()
     
+    @State private var showAddView: Bool = false
+    
     var body: some View {
         VStack {
             
@@ -23,20 +25,36 @@ struct CreateTask: View {
                 .foregroundColor(.gray.opacity(0.5))
                 .padding()
             
-            Text("Create a Task + ")
-                .font(.title)
-                .fontWeight(.bold)
-                .fontDesign(.serif)
-                .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.top)
-                .padding(.horizontal, 24)
+            
+            HStack {
+                            Text("Create a Task ")
+                                .font(.title)
+                                .fontWeight(.bold)
+                                .fontDesign(.serif)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.top)
+                                .padding(.horizontal, 24)
+                                
+                Button(action: {
+                    //action
+                               }) {
+                            Image(systemName: "plus.circle")
+                                .resizable()
+                                .frame(width: 30, height: 30)
+                                .foregroundColor(.black)
+                                .padding(.trailing, 30)
+                                .padding(.top, 11)
+                               }
+                               .buttonStyle(PlainButtonStyle())
+                
+                                }
             
             Spacer()
             
-            
+        
             
             VStack(spacing: 0) {
-                Text("Enter a Titles")
+                Text("Enter a Title")
                     .font(.title3)
                     .fontWeight(.semibold)
                     .frame(maxWidth: .infinity, alignment: .leading)

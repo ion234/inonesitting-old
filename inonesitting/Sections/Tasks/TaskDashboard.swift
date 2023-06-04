@@ -10,7 +10,7 @@ import SwiftUI
 @available(iOS 16.1, *)
 struct TaskDashboard: View {
     
-    @State private var showAddView: Bool = false
+    @State public var showAddView: Bool = false
 
     var body: some View {
         VStack(spacing: 0) {
