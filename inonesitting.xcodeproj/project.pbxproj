@@ -214,10 +214,18 @@
 			isa = PBXGroup;
 			children = (
 				E320469C2A0B0E4000BA1C76 /* RootView.swift */,
+				E36533692A2D12E6003C7DC1 /* Sessions */,
 				17C50D232A26EDB80022D330 /* Onboarding */,
 				17C50D242A26EDC30022D330 /* Tasks */,
 			);
 			path = Sections;
+			sourceTree = "<group>";
+		};
+		E36533692A2D12E6003C7DC1 /* Sessions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sessions;
 			sourceTree = "<group>";
 		};
 		E3AC2C0B2A15BEB800D9DEE4 /* ViewComponents */ = {
