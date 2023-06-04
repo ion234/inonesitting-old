@@ -1,4 +1,6 @@
 # InOneSitting
+![Image Alt Text](/Users/allenlin/Downloads/ios_logo.PNG)
+
 An app that aims to optimize productivity and workflow. 
 
 # Introduction
