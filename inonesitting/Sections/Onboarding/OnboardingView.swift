@@ -51,7 +51,7 @@ struct OnboardingView: View {
                         .fontWeight(.semibold)
                         .padding(.horizontal)
                     
-                    Text("In One Sitting")
+                    Text("InOneSitting")
                         .font(.largeTitle)
                         .fontWeight(.heavy)
                         .padding(.horizontal)
