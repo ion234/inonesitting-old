@@ -7,9 +7,13 @@
 
 import SwiftUI
 
+@available(iOS 16.1, *)
 struct CreateTask: View {
     
     @State private var title: String = ""
+    @State private var details: String = ""
+    @State private var startDate: Date = Date()
+    @State private var endDate: Date = Date()
     
     var body: some View {
         VStack {
@@ -19,7 +23,7 @@ struct CreateTask: View {
                 .foregroundColor(.gray.opacity(0.5))
                 .padding()
             
-            Text("Create Task +")
+            Text("Create a Task + ")
                 .font(.title)
                 .fontWeight(.bold)
                 .fontDesign(.serif)
@@ -30,8 +34,9 @@ struct CreateTask: View {
             Spacer()
             
             
+            
             VStack(spacing: 0) {
-                Text("Enter a Title")
+                Text("Enter a Titles")
                     .font(.title3)
                     .fontWeight(.semibold)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -45,19 +50,45 @@ struct CreateTask: View {
             }
             
             VStack(spacing: 0) {
-                Text("Enter a Title")
+                Text("Enter its Details")
                     .font(.title3)
                     .fontWeight(.semibold)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.vertical)
                     .padding(.horizontal, 24)
                 
-                TextField("Title", text: $title)
+                TextField("Details", text: $details)
                     .padding()
                     .border(.black, width: 1)
                     .padding(.horizontal, 24)
             
             }
+            
+            VStack(spacing: -55) {
+                            Text("Start Time ")
+                                .font(.title3)
+                                .fontWeight(.semibold)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.vertical)
+                                .padding(.horizontal, 24)
+                            
+                            DatePicker("", selection: $startDate, displayedComponents: [.date, .hourAndMinute])
+                                .padding()
+                                .padding(.horizontal, 24)
+                        }
+                        
+                        VStack(spacing: -55) {
+                            Text("End Time ")
+                                .font(.title3)
+                                .fontWeight(.semibold)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.vertical)
+                                .padding(.horizontal, 24)
+                            
+                            DatePicker("", selection: $endDate, displayedComponents: [.date, .hourAndMinute])
+                                .padding()
+                                .padding(.horizontal, 24)
+                        }
             
             Spacer()
             
@@ -71,6 +102,7 @@ struct CreateTask: View {
     }
 }
 
+@available(iOS 16.1, *)
 struct TaskAddView_Previews: PreviewProvider {
     static var previews: some View {
         CreateTask()
