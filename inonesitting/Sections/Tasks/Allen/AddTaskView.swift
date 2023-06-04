@@ -10,6 +10,8 @@ import SwiftUI
 struct AddTaskView: View {
     @EnvironmentObject var realmManager: RealmManager
     @State private var title: String = ""
+    @State public var startDate: Date = Date()
+    @State public var endDate: Date = Date()
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
@@ -21,12 +23,14 @@ struct AddTaskView: View {
             TextField("Enter your task here", text: $title)
                 .textFieldStyle(.roundedBorder)
             
-            Text("Create a new task.")
+            DatePicker("Start Date", selection: $startDate, displayedComponents: .date)
+                       
+            DatePicker("End Date", selection: $endDate, displayedComponents: .date)
             
             Button {
                 if title != "" {
                     realmManager.addTask(taskTitle: title)
-              co  }
+                }
                 dismiss()
             } label: {
                 Text("Add task")
