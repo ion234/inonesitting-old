@@ -16,11 +16,14 @@ struct RootView: View {
             VStack {
                 if isNewUser {
                     OnboardingView()
+                        .transition(.move(edge: .leading))
                 }
                 else {
                     TaskDashboard()
+                        .transition(.move(edge: .trailing))
                 }
             }
+            .animation(.default, value: isNewUser)
         }
     }
 }

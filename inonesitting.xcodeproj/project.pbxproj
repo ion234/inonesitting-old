@@ -87,6 +87,7 @@
 		178C129A2A2D00CB00CAFA60 /* WeatherArchive */ = {
 			isa = PBXGroup;
 			children = (
+				E32046A92A0B120200BA1C76 /* LocationManager.swift */,
 				17C50D252A26EDCC0022D330 /* Files */,
 			);
 			path = WeatherArchive;
@@ -202,7 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				E3549CAE2A17198300BA1C8D /* RealmManager.swift */,
-				E32046A92A0B120200BA1C76 /* LocationManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";

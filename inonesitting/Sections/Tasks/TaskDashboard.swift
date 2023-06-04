@@ -11,10 +11,8 @@ struct TaskDashboard: View {
     
     @State private var showAddView: Bool = false
     
+    @AppStorage("firstTask") private var isFirstTask: Bool = true
     
-    // Temporary variable for number of tasks
-    @State private var numTasks = 0
-
     var body: some View {
         VStack(spacing: 0) {
         
@@ -55,9 +53,7 @@ struct TaskDashboard: View {
             
             Divider()
                
-            if numTasks == 0 {
-                
-                
+            if isFirstTask {
                 ScrollView(showsIndicators: false) {
                     
                     VStack {
@@ -72,6 +68,7 @@ struct TaskDashboard: View {
                         Button {
                             
                             showAddView = true
+                            isFirstTask = false
                             
                         } label: {
                             Text("New Task")
@@ -92,8 +89,13 @@ struct TaskDashboard: View {
                     
                 }
             }
+            
             else {
-                
+                ScrollView(showsIndicators: false) {
+                    
+                    
+                    
+                }
             }
         }
         .background(Color.background)
