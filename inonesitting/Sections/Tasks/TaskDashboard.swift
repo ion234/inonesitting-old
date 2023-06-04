@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-@available(iOS 16.1, *)
 struct TaskDashboard: View {
     
     @State private var showAddView: Bool = false
@@ -63,7 +62,6 @@ struct TaskDashboard: View {
     }
 }
 
-@available(iOS 16.1, *)
 struct TaskDashboard_Previews: PreviewProvider {
     static var previews: some View {
         TaskDashboard()

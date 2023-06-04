@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-@available(iOS 16.1, *)
 struct CreateTask: View {
     
     @State private var title: String = ""
@@ -102,7 +101,6 @@ struct CreateTask: View {
     }
 }
 
-@available(iOS 16.1, *)
 struct TaskAddView_Previews: PreviewProvider {
     static var previews: some View {
         CreateTask()
