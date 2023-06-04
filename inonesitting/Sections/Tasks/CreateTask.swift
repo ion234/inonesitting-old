@@ -15,7 +15,7 @@ struct CreateTask: View {
     @State private var startDate: Date = Date()
     @State private var endDate: Date = Date()
     
-    @State private var showAddView: Bool = false
+
     
     var body: some View {
         VStack {
@@ -82,8 +82,9 @@ struct CreateTask: View {
             
             }
             
-            VStack(spacing: -55) {
-                            Text("Start Time ")
+            VStack(spacing: -60) {
+                            Text("Start Time: ")
+                //The start time is the time when a person should start their task.
                                 .font(.title3)
                                 .fontWeight(.semibold)
                                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -94,9 +95,24 @@ struct CreateTask: View {
                                 .padding()
                                 .padding(.horizontal, 24)
                         }
+            
+
+            
+            VStack(spacing: 0) {
+                Text("Duration: ")
+                    .font(.title3)
+                    .fontWeight(.semibold)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .padding(.vertical)
+                    .padding(.horizontal, 24)
+                
+                // Add a Picker or TextField to input the task duration here
+                
+            }
+            
                         
-                        VStack(spacing: -55) {
-                            Text("End Time ")
+                        VStack(spacing: -60) {
+                            Text("Due Date: ")
                                 .font(.title3)
                                 .fontWeight(.semibold)
                                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -108,11 +124,12 @@ struct CreateTask: View {
                                 .padding(.horizontal, 24)
                         }
             
-            Spacer()
+                        
             
             Spacer()
             
             Spacer()
+            
             
         }
         .frame(maxWidth: .infinity)
