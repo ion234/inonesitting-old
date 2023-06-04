@@ -12,6 +12,8 @@ struct CreateTask: View {
     
     @State private var title: String = ""
     @State private var details: String = ""
+    @State private var startDate: Date = Date()
+    @State private var endDate: Date = Date()
     
     var body: some View {
         VStack {
@@ -21,7 +23,7 @@ struct CreateTask: View {
                 .foregroundColor(.gray.opacity(0.5))
                 .padding()
             
-            Text("Create Task + ")
+            Text("Create a Task + ")
                 .font(.title)
                 .fontWeight(.bold)
                 .fontDesign(.serif)
@@ -60,6 +62,35 @@ struct CreateTask: View {
                     .padding(.horizontal, 24)
             
             }
+            
+            VStack(spacing: -55) {
+                            Text("Start Date")
+                                .font(.title3)
+                                .fontWeight(.semibold)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.vertical)
+                                .padding(.horizontal, 24)
+                
+              
+                    DatePicker("", selection: $startDate, displayedComponents: .date)
+                        .padding()
+                        .padding(.horizontal, 24)
+                
+                
+                        }
+                        
+                        VStack(spacing: -55) {
+                            Text("End Date")
+                                .font(.title3)
+                                .fontWeight(.semibold)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.vertical)
+                                .padding(.horizontal, 24)
+                            
+                            DatePicker("", selection: $endDate, displayedComponents: .date)
+                                .padding()
+                                .padding(.horizontal, 24)
+                        }
             
             Spacer()
             
