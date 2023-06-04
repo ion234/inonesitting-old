@@ -14,7 +14,7 @@
 		E30C8EB62A16AF1300A17FEB /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C8EB52A16AF1300A17FEB /* TaskView.swift */; };
 		E30C8EB82A16B07A00A17FEB /* TaskRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E30C8EB72A16B07A00A17FEB /* TaskRow.swift */; };
 		E320469B2A0B0E4000BA1C76 /* inonesittingApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E320469A2A0B0E4000BA1C76 /* inonesittingApp.swift */; };
-		E320469D2A0B0E4000BA1C76 /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E320469C2A0B0E4000BA1C76 /* Main.swift */; };
+		E320469D2A0B0E4000BA1C76 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E320469C2A0B0E4000BA1C76 /* RootView.swift */; };
 		E320469F2A0B0E4300BA1C76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E320469E2A0B0E4300BA1C76 /* Assets.xcassets */; };
 		E32046A22A0B0E4300BA1C76 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E32046A12A0B0E4300BA1C76 /* Preview Assets.xcassets */; };
 		E32046AA2A0B120200BA1C76 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E32046A92A0B120200BA1C76 /* LocationManager.swift */; };
@@ -44,7 +44,7 @@
 		E30C8EB72A16B07A00A17FEB /* TaskRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRow.swift; sourceTree = "<group>"; };
 		E32046972A0B0E4000BA1C76 /* inonesitting.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = inonesitting.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E320469A2A0B0E4000BA1C76 /* inonesittingApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = inonesittingApp.swift; sourceTree = "<group>"; };
-		E320469C2A0B0E4000BA1C76 /* Main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Main.swift; sourceTree = "<group>"; };
+		E320469C2A0B0E4000BA1C76 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		E320469E2A0B0E4300BA1C76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E32046A12A0B0E4300BA1C76 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E32046A92A0B120200BA1C76 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -82,6 +82,14 @@
 				172921672A2C100C0091C0F7 /* TaskModel.swift */,
 			);
 			path = TaskModel;
+			sourceTree = "<group>";
+		};
+		178C129A2A2D00CB00CAFA60 /* WeatherArchive */ = {
+			isa = PBXGroup;
+			children = (
+				17C50D252A26EDCC0022D330 /* Files */,
+			);
+			path = WeatherArchive;
 			sourceTree = "<group>";
 		};
 		17BD52E32A27D78B00D356A7 /* Allen */ = {
@@ -132,12 +140,14 @@
 			path = Tasks;
 			sourceTree = "<group>";
 		};
-		17C50D252A26EDCC0022D330 /* Weather */ = {
+		17C50D252A26EDCC0022D330 /* Files */ = {
 			isa = PBXGroup;
 			children = (
+				E35C00B32A1477060011383D /* WeatherManager.swift */,
+				E3AC2C0C2A15BEF600D9DEE4 /* WeatherRow.swift */,
 				E35C00B72A147EF00011383D /* WeatherView.swift */,
 			);
-			path = Weather;
+			path = Files;
 			sourceTree = "<group>";
 		};
 		17C50D262A26EDD40022D330 /* Task */ = {
@@ -167,6 +177,7 @@
 		E32046992A0B0E4000BA1C76 /* inonesitting */ = {
 			isa = PBXGroup;
 			children = (
+				178C129A2A2D00CB00CAFA60 /* WeatherArchive */,
 				E320469A2A0B0E4000BA1C76 /* inonesittingApp.swift */,
 				17C50D202A26ED680022D330 /* Core */,
 				E32046AB2A0B13F800BA1C76 /* Sections */,
@@ -192,7 +203,6 @@
 			children = (
 				E3549CAE2A17198300BA1C8D /* RealmManager.swift */,
 				E32046A92A0B120200BA1C76 /* LocationManager.swift */,
-				E35C00B32A1477060011383D /* WeatherManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -200,9 +210,8 @@
 		E32046AB2A0B13F800BA1C76 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
-				E320469C2A0B0E4000BA1C76 /* Main.swift */,
+				E320469C2A0B0E4000BA1C76 /* RootView.swift */,
 				17C50D232A26EDB80022D330 /* Onboarding */,
-				17C50D252A26EDCC0022D330 /* Weather */,
 				17C50D242A26EDC30022D330 /* Tasks */,
 			);
 			path = Sections;
@@ -212,7 +221,6 @@
 			isa = PBXGroup;
 			children = (
 				E32046AE2A0B1A5E00BA1C76 /* Loading View.swift */,
-				E3AC2C0C2A15BEF600D9DEE4 /* WeatherRow.swift */,
 				E30C8EB72A16B07A00A17FEB /* TaskRow.swift */,
 				E3549CA72A17159B00BA1C8D /* SmallAddButton.swift */,
 			);
@@ -304,7 +312,7 @@
 				E32046AF2A0B1A5E00BA1C76 /* Loading View.swift in Sources */,
 				E30C8EB42A16AEE400A17FEB /* TaskListView.swift in Sources */,
 				172921682A2C100C0091C0F7 /* TaskModel.swift in Sources */,
-				E320469D2A0B0E4000BA1C76 /* Main.swift in Sources */,
+				E320469D2A0B0E4000BA1C76 /* RootView.swift in Sources */,
 				E30C8EB82A16B07A00A17FEB /* TaskRow.swift in Sources */,
 				E320469B2A0B0E4000BA1C76 /* inonesittingApp.swift in Sources */,
 				E3549CAF2A17198300BA1C8D /* RealmManager.swift in Sources */,
