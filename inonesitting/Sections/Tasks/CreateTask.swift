@@ -21,7 +21,7 @@ struct CreateTask: View {
                 .foregroundColor(.gray.opacity(0.5))
                 .padding()
             
-            Text("Create Task")
+            Text("Create Task + ")
                 .font(.title)
                 .fontWeight(.bold)
                 .fontDesign(.serif)
