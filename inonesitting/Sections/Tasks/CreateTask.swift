@@ -36,7 +36,7 @@ struct CreateTask: View {
             
             
             VStack(spacing: 0) {
-                Text("Enter a Title")
+                Text("Enter a Titles")
                     .font(.title3)
                     .fontWeight(.semibold)
                     .frame(maxWidth: .infinity, alignment: .leading)
