@@ -6,7 +6,7 @@ Our app will develop a customized and individualized approach to how you start w
 
 Typically, when you sit down to work, you will feel overwhelmed by the amount of tasks you have to complete. To complicate the matter even further, you also face choice paralysis. It is always the same question asked: "Where do I begin?" 
 
-Well, InOneSitting aims to solve this issue. By using a combination of Machine Learning and our algorithms, we will provide you the best approach for you to start your set of tasks. And we aim to help you finish most of your task in one sitting. 
+Well, InOneSitting aims to solve this issue. By using a combination of Machine Learning and our algorithms, we will provide you the best approach for you to start your set of tasks. And we aim to help you make the most of your time in one sitting. 
 
 Our estimated launch date for the app is between Winter 2023 and Spring 2024.
 
