@@ -30,7 +30,7 @@ struct TaskDashboard: View {
                         .frame(maxWidth: .infinity, alignment: .leading)
                     
                 }
-                .padding(.leading, 32)
+                .padding(.leading, 24)
                 
                 Button {
                     showAddView = true
@@ -41,12 +41,11 @@ struct TaskDashboard: View {
                         .foregroundColor(.white)
                         .padding(8)
                         .background(Circle().foregroundColor(.red))
-                        .padding(.trailing, 32)
+                        .padding(.trailing, 24)
                 }
                 .buttonStyle(.plain)
                     
             }
-            
             .padding(.top, 24)
             .padding(.bottom)
             

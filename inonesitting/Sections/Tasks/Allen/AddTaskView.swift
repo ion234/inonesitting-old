@@ -46,7 +46,6 @@ struct AddTaskView: View {
             Spacer()
             
             
-            
         }
         .padding(.top, 40)
         .padding(.horizontal)
